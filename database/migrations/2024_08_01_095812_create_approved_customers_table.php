@@ -20,6 +20,9 @@ return new class extends Migration
             $table->string('sehir');
             $table->string('mail');
             $table->string('tel_no');
+            $table->string('ip_address')->nullable();
+            $table->string('user_agent')->nullable();
+            $table->json('session_data')->nullable();
             $table->timestamps();
         });
     }

@@ -8,8 +8,8 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    <strong>Teşekkürler!</strong>
+                <div class="p-6 text-gray-900 flex justify-center">
+                    <h1 class="text-3xl font-bold">Teşekkürler!</h1>
                 </div>
             </div>
         </div>

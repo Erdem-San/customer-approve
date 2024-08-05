@@ -7,6 +7,7 @@ use App\Models\Customer;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -22,10 +23,16 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
 
-        Customer::factory()->count(50)->create();
+        User::create([
+            'name' => 'Erdem',
+            'email' => 'erdem@gmail.com',
+            'password' => Hash::make('123123123'),
+        ]);
 
-        // Onaylanmış müşteri verilerini oluştur
-        ApprovedCustomer::factory()->count(20)->create();
+        // Customer::factory()->count(50)->create();
+
+        // // Onaylanmış müşteri verilerini oluştur
+        // ApprovedCustomer::factory()->count(20)->create();
 
     }
 }

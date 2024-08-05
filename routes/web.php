@@ -25,6 +25,7 @@ Route::middleware('auth')->group(function () {
     // CSV import route'u
     Route::post('/import', [CustomerController::class, 'import'])->name('import.process');
     // Müşteri onaylama route'u
+    Route::get('/approved-customers/export', [ApprovedCustomerController::class, 'export'])->name('approved.customers.export');
 });
 
 Route::get('/thanks', function () {

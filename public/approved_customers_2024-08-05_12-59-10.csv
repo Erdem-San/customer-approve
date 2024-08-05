@@ -1,0 +1,4 @@
+Ad,Soyad,"Ip Adresi","Kullanıcı Araçları","Ev No","Posta Kodu",Şehir,Mail,"Tel No","Onaylanma Tarihi"
+Ayşe,Kaya,127.0.0.1,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36","Atatürk Caddesi No:12, Çankaya, Ankara",07530,Ankara,ayse.kaya@example.com,05554443323,"2024-08-02 07:44:25"
+Hüseyin,Aydın,127.0.0.1,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36","Kızılay Meydanı No:9, Melikgazi, Kayseri",07530,Kayseri,huseyin.aydin@example.com,05554443330,"2024-08-02 07:45:09"
+Ali,Erdoğan,127.0.0.1,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36","Göztepe Mahallesi, Şehit Sokak No:7, Konak, İzmir",07530,İzmir,ali.erdogan@example.com,05554443328,"2024-08-02 07:45:25"

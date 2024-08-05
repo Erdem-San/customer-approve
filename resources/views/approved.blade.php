@@ -1,3 +1,5 @@
+<!-- resources/views/approved.blade.php -->
+
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -10,12 +12,21 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     <h2 class="text-2xl font-bold mb-4">Onaylanmış Müşteri Listesi</h2>
+
+                    <div class="mb-4">
+                        <a href="{{ route('approved.customers.export') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                            CSV İndir
+                        </a>
+                    </div>
+
                     <div class="overflow-x-auto">
                         <table class="min-w-full bg-white">
                             <thead class="bg-gray-100">
                                 <tr>
                                     <th class="py-2 px-4 border-b">Ad</th>
                                     <th class="py-2 px-4 border-b">Soyad</th>
+                                    <th class="py-2 px-4 border-b">Ip Adresi</th>
+                                    <th class="py-2 px-4 border-b">Kullanıcı Araçları</th>
                                     <th class="py-2 px-4 border-b">Ev No</th>
                                     <th class="py-2 px-4 border-b">Posta</th>
                                     <th class="py-2 px-4 border-b">Şehir</th>
@@ -29,6 +40,8 @@
                                     <tr>
                                         <td class="py-2 px-4 border-b">{{ $customer->ad }}</td>
                                         <td class="py-2 px-4 border-b">{{ $customer->soyad }}</td>
+                                        <td class="py-2 px-4 border-b">{{ $customer->ip_address }}</td>
+                                        <td class="py-2 px-4 border-b">{{ $customer->user_agent }}</td>
                                         <td class="py-2 px-4 border-b">{{ $customer->ev_no }}</td>
                                         <td class="py-2 px-4 border-b">{{ $customer->posta_kodu }}</td>
                                         <td class="py-2 px-4 border-b">{{ $customer->sehir }}</td>

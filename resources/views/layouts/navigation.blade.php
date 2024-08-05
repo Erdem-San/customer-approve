@@ -13,10 +13,10 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ __('Müşteri Listesi') }}
                     </x-nav-link>
                     <x-nav-link :href="route('approved')" :active="request()->routeIs('approved')">
-                        {{ __('Onaylanmış') }}
+                        {{ __('Onaylanmış Müşteriler') }}
                     </x-nav-link>
                 </div>
             </div>

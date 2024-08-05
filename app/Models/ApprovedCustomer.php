@@ -9,5 +9,5 @@ class ApprovedCustomer extends Model
 {
     use HasFactory;
 
-    protected $fillable = [ 'ad', 'soyad', 'ev_no', 'posta_kodu', 'sehir', 'mail', 'tel_no', 'unique_link'];
+    protected $fillable = [ 'ad', 'soyad', 'ev_no', 'posta_kodu', 'sehir', 'mail', 'tel_no', 'unique_link', 'ip_address', 'user_agent', 'session_data'];
 }
