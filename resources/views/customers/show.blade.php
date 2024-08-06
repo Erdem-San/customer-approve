@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
+    <div class="py-4">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden sm:rounded-lg">
                 <div class="p-6 text-gray-900">
@@ -49,6 +49,11 @@
                             Ik keur goed
                         </button>
                     </form>
+
+                    <div class="mt-8 flex justify-center space-x-4">
+                        <a href="/services" target="_blank" class="underline hover:no-underline">Services</a>
+                        <a href="/privacy" target="_blank" class="underline hover:no-underline">Privacy</a>
+                    </div>
                 </div>
             </div>
         </div>

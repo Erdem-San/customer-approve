@@ -12,7 +12,7 @@ class ApprovedCustomerController extends Controller
     public function index()
     {
         $customers = ApprovedCustomer::latest()->paginate(10); // Her sayfada 10 müşteri gösterilecek
-        return view('approved', compact('customers'));
+        return view('approved-customers.index', compact('customers'));
     }
 
     public function store(Request $request, $uniqueLink)
@@ -83,5 +83,25 @@ class ApprovedCustomerController extends Controller
             'Content-Disposition' => 'attachment; filename="' . $filename . '"',
         ])->deleteFileAfterSend(true);
     }
+
+    public function search(Request $request)
+    {
+        $query = $request->search_string;
+
+        $customers = ApprovedCustomer::where('voornaam', 'like', "%{$query}%")
+            ->orWhere('achternaam', 'like', "%{$query}%")
+            ->orWhere('straatnaam', 'like', "%{$query}%")
+            ->orWhere('postcode', 'like', "%{$query}%")
+            ->paginate(10);
+
+        if ($customers->count() >= 1) {
+            return view('approved-customers.partials.customer-table', compact('customers'))->render();
+        } else {
+            return response()->json([
+                'status' => 'nothing_found',
+            ]);
+        }
+    }
+
 }
 

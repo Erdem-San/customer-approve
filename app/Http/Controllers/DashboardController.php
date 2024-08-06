@@ -10,6 +10,6 @@ class DashboardController extends Controller
     public function index()
     {
         $customers = Customer::latest()->paginate(10); // Her sayfada 10 müşteri gösterilecek
-        return view('dashboard', compact('customers'));
+        return view('customers.index', compact('customers'));
     }
 }

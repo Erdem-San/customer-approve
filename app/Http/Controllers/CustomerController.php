@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Customer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
@@ -32,6 +33,12 @@ class CustomerController extends Controller
         'Aanbod' => 'aanbod',
     ];
 
+    public function index()
+    {
+        $customers = Customer::latest()->paginate(10); // Her sayfada 10 müşteri gösterilecek
+        return view('customers.index', compact('customers'));
+    }
+
     public function import(Request $request)
     {
         $request->validate([
@@ -58,7 +65,7 @@ class CustomerController extends Controller
             Customer::create($data);
         }
 
-        return redirect()->route('dashboard')->with('success', 'XLSX dosyası başarıyla içe aktarıldı.');
+        return redirect()->route('customers.index')->with('success', 'XLSX dosyası başarıyla içe aktarıldı.');
     }
 
     private function mapHeadersToColumns($headers)
@@ -96,7 +103,7 @@ class CustomerController extends Controller
 
     public function show(Customer $customer)
     {
-        return view('customer.show', ['customer' => $customer]);
+        return view('customers.show', ['customer' => $customer]);
     }
 
     public function export()
@@ -149,5 +156,30 @@ class CustomerController extends Controller
         $writer->save($path);
 
         return response()->download($path)->deleteFileAfterSend(true);
+    }
+
+    public function deleteAll()
+    {
+        Customer::truncate(); // Bu yöntem, tüm kayıtları siler
+        return redirect()->route('customers.index')->with('success', 'Tüm müşteriler başarıyla silindi.');
+    }
+
+    public function search(Request $request)
+    {
+        $query = $request->search_string;
+
+        $customers = Customer::where('voornaam', 'like', "%{$query}%")
+            ->orWhere('achternaam', 'like', "%{$query}%")
+            ->orWhere('straatnaam', 'like', "%{$query}%")
+            ->orWhere('postcode', 'like', "%{$query}%")
+            ->paginate(10);
+
+        if ($customers->count() >= 1) {
+            return view('customers.partials.customer-table', compact('customers'))->render();
+        } else {
+            return response()->json([
+                'status' => 'nothing_found',
+            ]);
+        }
     }
 }

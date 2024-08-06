@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
+            {{ __('Approved Customers') }}
         </h2>
     </x-slot>
 
@@ -9,26 +9,18 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                    <div class="flex items-center space-x-2">
-                        <form action="{{ route('import.process') }}" method="POST" enctype="multipart/form-data">
-                            @csrf
-                            <input type="file" name="csv_file" required>
-                            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                                İçe Aktar
-                            </button>
-                        </form>
+                    <h2 class="text-2xl font-bold mb-4">Onaylanmış Müşteri Listesi</h2>
 
-                        <div>
-                            <a href="{{ route('customers.export') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-[11px] px-4 rounded">
-                                Dışa aktar
-                            </a>
-                        </div>
+                    <div class="mb-4">
+                        <input type="text" name="search" id="search" class="w-full border border-gray-300 p-2 rounded" placeholder="Müşteri ara..." />
                     </div>
-                    <h2 class="text-2xl font-bold mb-4">Müşteri Listesi</h2>
+
                     <div class="overflow-x-auto">
-                        <table class="min-w-full bg-white">
+                        <table id="customersTable" class="min-w-full bg-white">
                             <thead class="bg-gray-100">
                                 <tr>
+                                    <th class="py-2 px-4 border-b">Ip Address</th>
+                                    <th class="py-2 px-4 border-b">User Agent</th>
                                     <th class="py-2 px-4 border-b">Geslacht</th>
                                     <th class="py-2 px-4 border-b">Voornaam</th>
                                     <th class="py-2 px-4 border-b">Tussenvoegsel</th>
@@ -45,12 +37,13 @@
                                     <th class="py-2 px-4 border-b">Leverancier</th>
                                     <th class="py-2 px-4 border-b">Saledatum</th>
                                     <th class="py-2 px-4 border-b">Aanbod</th>
-                                    <th class="py-2 px-4 border-b">Link</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach($customers as $customer)
                                     <tr>
+                                        <td class="py-2 px-4 border-b">{{ $customer->ip_address }}</td>
+                                        <td class="py-2 px-4 border-b">{{ $customer->user_agent }}</td>
                                         <td class="py-2 px-4 border-b">{{ $customer->geslacht }}</td>
                                         <td class="py-2 px-4 border-b">{{ $customer->voornaam }}</td>
                                         <td class="py-2 px-4 border-b">{{ $customer->tussenvoegsel }}</td>
@@ -67,7 +60,6 @@
                                         <td class="py-2 px-4 border-b">{{ $customer->leverancier }}</td>
                                         <td class="py-2 px-4 border-b">{{ $customer->saledatum }}</td>
                                         <td class="py-2 px-4 border-b">{{ $customer->aanbod }}</td>
-                                        <td class="py-2 px-4 border-b">{{ $customer->unique_link }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>
@@ -82,4 +74,27 @@
             </div>
         </div>
     </div>
+
+    @push('scripts')
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+        <script>
+            $(document).on('keyup', function(e) {
+                e.preventDefault();
+                let search_string = $('#search').val();
+                $.ajax({
+                    url: "{{ route('approved.customers.search') }}",
+                    method: 'GET',
+                    data: { search_string: search_string },
+                    success: function(res) {
+                        if (res.status !== 'nothing_found') {
+                            $('#customersTable tbody').html(res);
+                        } else {
+                            $('#customersTable tbody').html('<tr><td colspan="17" class="text-center py-2">Sonuç bulunamadı.</td></tr>');
+                        }
+                    }
+                })
+            });
+        </script>
+        @endpush
 </x-app-layout>

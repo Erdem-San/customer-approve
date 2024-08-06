@@ -9,10 +9,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/privacy', function () {
+    return view('privacy.privacy');
+});
+Route::get('/services', function () {
+    return view('privacy.services');
+});
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/customers', function () {
+//     return view('customers.index');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -20,7 +26,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     // Dashboard route'u
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/customers', [CustomerController::class, 'index'])->name('customers.index');
     Route::get('/approved', [ApprovedCustomerController::class, 'index'])->name('approved');
     // CSV import route'u
     Route::post('/import', [CustomerController::class, 'import'])->name('import.process');
@@ -28,6 +34,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/approved-customers/export', [ApprovedCustomerController::class, 'export'])->name('approved.customers.export');
     // Müşteri dashboard route'u
     Route::get('/dashboard/export', [CustomerController::class, 'export'])->name('customers.export');
+    // Müşteri tabloyu sil
+    Route::delete('/customers/delete-all', [CustomerController::class, 'deleteAll'])->name('customers.delete_all');
+    // Müşteri tablosu arama
+    Route::get('/customers/search', [CustomerController::class, 'search'])->name('customers.search');
+    // Müşteri Onay Tablosu arama
+    Route::get('/approved/search', [ApprovedCustomerController::class, 'search'])->name('approved.customers.search');
 });
 
 Route::get('/thanks', function () {
