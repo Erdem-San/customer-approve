@@ -26,6 +26,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/import', [CustomerController::class, 'import'])->name('import.process');
     // Müşteri onaylama route'u
     Route::get('/approved-customers/export', [ApprovedCustomerController::class, 'export'])->name('approved.customers.export');
+    // Müşteri dashboard route'u
+    Route::get('/dashboard/export', [CustomerController::class, 'export'])->name('customers.export');
 });
 
 Route::get('/thanks', function () {

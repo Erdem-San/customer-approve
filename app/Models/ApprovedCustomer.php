@@ -9,5 +9,25 @@ class ApprovedCustomer extends Model
 {
     use HasFactory;
 
-    protected $fillable = [ 'ad', 'soyad', 'ev_no', 'posta_kodu', 'sehir', 'mail', 'tel_no', 'unique_link', 'ip_address', 'user_agent', 'session_data'];
+    protected $fillable = [ 'id',
+    'Geslacht',
+    'Voornaam',
+    'Tussenvoegsel',
+    'Achternaam',
+    'Straatnaam',
+    'Huisnummer',
+    'Toevoeging',
+    'Postcode',
+    'Woonplaats',
+    'Iban',
+    'Tenaamstellng',
+    'Tel1',
+    'Tel2',
+    'Leverancier',
+    'Saledatum',
+    'Aanbod',
+    'unique_link', '
+    ip_address',
+    'user_agent',
+    'session_data'];
 }

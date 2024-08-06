@@ -1,5 +1,3 @@
-<!-- resources/views/approved.blade.php -->
-
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -13,41 +11,57 @@
                 <div class="p-6 text-gray-900">
                     <h2 class="text-2xl font-bold mb-4">Onaylanmış Müşteri Listesi</h2>
 
-                    <div class="mb-4">
+                    {{-- <div class="mb-4">
                         <a href="{{ route('approved.customers.export') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                             CSV İndir
                         </a>
-                    </div>
+                    </div> --}}
 
                     <div class="overflow-x-auto">
                         <table class="min-w-full bg-white">
                             <thead class="bg-gray-100">
                                 <tr>
-                                    <th class="py-2 px-4 border-b">Ad</th>
-                                    <th class="py-2 px-4 border-b">Soyad</th>
-                                    <th class="py-2 px-4 border-b">Ip Adresi</th>
-                                    <th class="py-2 px-4 border-b">Kullanıcı Araçları</th>
-                                    <th class="py-2 px-4 border-b">Ev No</th>
-                                    <th class="py-2 px-4 border-b">Posta</th>
-                                    <th class="py-2 px-4 border-b">Şehir</th>
-                                    <th class="py-2 px-4 border-b">Mail</th>
-                                    <th class="py-2 px-4 border-b">Tel No</th>
-                                    <th class="py-2 px-4 border-b">Onaylanma Tarihi</th>
+                                    <th class="py-2 px-4 border-b">Ip Address</th>
+                                    <th class="py-2 px-4 border-b">User Agent</th>
+                                    <th class="py-2 px-4 border-b">Geslacht</th>
+                                    <th class="py-2 px-4 border-b">Voornaam</th>
+                                    <th class="py-2 px-4 border-b">Tussenvoegsel</th>
+                                    <th class="py-2 px-4 border-b">Achternaam</th>
+                                    <th class="py-2 px-4 border-b">Straatnaam</th>
+                                    <th class="py-2 px-4 border-b">Huisnummer</th>
+                                    <th class="py-2 px-4 border-b">Toevoeging</th>
+                                    <th class="py-2 px-4 border-b">Postcode</th>
+                                    <th class="py-2 px-4 border-b">Woonplaats</th>
+                                    <th class="py-2 px-4 border-b">Iban</th>
+                                    <th class="py-2 px-4 border-b">Tenaamstellng</th>
+                                    <th class="py-2 px-4 border-b">Tel 1</th>
+                                    <th class="py-2 px-4 border-b">Tel 2</th>
+                                    <th class="py-2 px-4 border-b">Leverancier</th>
+                                    <th class="py-2 px-4 border-b">Saledatum</th>
+                                    <th class="py-2 px-4 border-b">Aanbod</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach($customers as $customer)
                                     <tr>
-                                        <td class="py-2 px-4 border-b">{{ $customer->ad }}</td>
-                                        <td class="py-2 px-4 border-b">{{ $customer->soyad }}</td>
                                         <td class="py-2 px-4 border-b">{{ $customer->ip_address }}</td>
                                         <td class="py-2 px-4 border-b">{{ $customer->user_agent }}</td>
-                                        <td class="py-2 px-4 border-b">{{ $customer->ev_no }}</td>
-                                        <td class="py-2 px-4 border-b">{{ $customer->posta_kodu }}</td>
-                                        <td class="py-2 px-4 border-b">{{ $customer->sehir }}</td>
-                                        <td class="py-2 px-4 border-b">{{ $customer->mail }}</td>
-                                        <td class="py-2 px-4 border-b">{{ $customer->tel_no }}</td>
-                                        <td class="py-2 px-4 border-b">{{ $customer->created_at }}</td>
+                                        <td class="py-2 px-4 border-b">{{ $customer->geslacht }}</td>
+                                        <td class="py-2 px-4 border-b">{{ $customer->voornaam }}</td>
+                                        <td class="py-2 px-4 border-b">{{ $customer->tussenvoegsel }}</td>
+                                        <td class="py-2 px-4 border-b">{{ $customer->achternaam }}</td>
+                                        <td class="py-2 px-4 border-b">{{ $customer->straatnaam }}</td>
+                                        <td class="py-2 px-4 border-b">{{ $customer->huisnummer }}</td>
+                                        <td class="py-2 px-4 border-b">{{ $customer->toevoeging }}</td>
+                                        <td class="py-2 px-4 border-b">{{ $customer->postcode }}</td>
+                                        <td class="py-2 px-4 border-b">{{ $customer->woonplaats }}</td>
+                                        <td class="py-2 px-4 border-b">{{ $customer->iban }}</td>
+                                        <td class="py-2 px-4 border-b">{{ $customer->tenaamstellng }}</td>
+                                        <td class="py-2 px-4 border-b">{{ $customer->tel1 }}</td>
+                                        <td class="py-2 px-4 border-b">{{ $customer->tel2 }}</td>
+                                        <td class="py-2 px-4 border-b">{{ $customer->leverancier }}</td>
+                                        <td class="py-2 px-4 border-b">{{ $customer->saledatum }}</td>
+                                        <td class="py-2 px-4 border-b">{{ $customer->aanbod }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>

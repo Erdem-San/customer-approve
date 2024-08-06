@@ -27,6 +27,9 @@ class Customer extends Model
     }
 
     protected $fillable = [
-        'id', 'ad', 'soyad', 'ev_no', 'posta_kodu', 'sehir', 'mail', 'tel_no', 'unique_link'
+        'geslacht', 'voornaam', 'tussenvoegsel', 'achternaam', 'straatnaam',
+        'huisnummer', 'toevoeging', 'postcode', 'woonplaats', 'geboortedatum',
+        'iban', 'tenaamstellng', 'email', 'tel1', 'tel2', 'leverancier',
+        'saledatum', 'aanbod', 'unique_link'
     ];
 }

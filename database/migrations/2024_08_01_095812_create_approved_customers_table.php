@@ -13,16 +13,27 @@ return new class extends Migration
     {
         Schema::create('approved_customers', function (Blueprint $table) {
             $table->id();
-            $table->string('ad');
-            $table->string('soyad');
-            $table->string('ev_no');
-            $table->string('posta_kodu');
-            $table->string('sehir');
-            $table->string('mail');
-            $table->string('tel_no');
-            $table->string('ip_address')->nullable();
-            $table->string('user_agent')->nullable();
-            $table->json('session_data')->nullable();
+            $table->string('geslacht', 191)->nullable();
+            $table->string('voornaam', 191)->nullable();
+            $table->string('tussenvoegsel', 191)->nullable();
+            $table->string('achternaam', 191)->nullable();
+            $table->string('straatnaam', 191)->nullable();
+            $table->string('geboortedatum')->nullable();
+            $table->string('email')->nullable();
+            $table->string('huisnummer', 191)->nullable();
+            $table->string('toevoeging', 191)->nullable();
+            $table->string('postcode', 191)->nullable();
+            $table->string('woonplaats', 191)->nullable();
+            $table->string('iban', 191)->nullable();
+            $table->string('tenaamstellng', 191)->nullable();
+            $table->string('tel1', 191)->nullable();
+            $table->string('tel2', 191)->nullable();
+            $table->string('leverancier', 191)->nullable();
+            $table->string('saledatum', 191)->nullable();
+            $table->string('aanbod', 191)->nullable();
+            $table->string('ip_address', 45)->nullable();
+            $table->string('user_agent', 255)->nullable();
+            $table->text('session_data')->nullable(); // JSON yerine TEXT
             $table->timestamps();
         });
     }

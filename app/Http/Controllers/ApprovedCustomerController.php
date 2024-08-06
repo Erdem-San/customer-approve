@@ -19,13 +19,24 @@ class ApprovedCustomerController extends Controller
     {
         // Yeni onaylı müşteri oluştur
         $approvedCustomer = new ApprovedCustomer();
-        $approvedCustomer->ad = $request->ad;
-        $approvedCustomer->soyad = $request->soyad;
-        $approvedCustomer->ev_no = $request->ev_no;
-        $approvedCustomer->posta_kodu = $request->posta_kodu;
-        $approvedCustomer->sehir = $request->sehir;
-        $approvedCustomer->mail = $request->mail;
-        $approvedCustomer->tel_no = $request->tel_no;
+        $approvedCustomer->geslacht = $request->geslacht;
+        $approvedCustomer->voornaam = $request->voornaam;
+        $approvedCustomer->tussenvoegsel = $request->tussenvoegsel;
+        $approvedCustomer->achternaam = $request->achternaam;
+        $approvedCustomer->straatnaam = $request->straatnaam;
+        $approvedCustomer->huisnummer = $request->huisnummer;
+        $approvedCustomer->toevoeging = $request->toevoeging;
+        $approvedCustomer->postcode = $request->postcode;
+        $approvedCustomer->woonplaats = $request->woonplaats;
+        $approvedCustomer->geboortedatum = $request->geboortedatum;
+        $approvedCustomer->iban = $request->iban;
+        $approvedCustomer->tenaamstellng = $request->tenaamstellng;
+        $approvedCustomer->email = $request->email;
+        $approvedCustomer->tel1 = $request->tel1;
+        $approvedCustomer->tel2 = $request->tel2;
+        $approvedCustomer->leverancier = $request->leverancier;
+        $approvedCustomer->saledatum = $request->saledatum;
+        $approvedCustomer->aanbod = $request->aanbod;
 
         $approvedCustomer->ip_address = $request->ip();
         $approvedCustomer->user_agent = $request->userAgent();

@@ -2,7 +2,6 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -14,14 +13,25 @@ return new class extends Migration
     {
         Schema::create('customers', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('ad');
-            $table->string('soyad');
-            $table->string('ev_no');
-            $table->string('posta_kodu');
-            $table->string('sehir');
-            $table->string('mail');
-            $table->string('tel_no');
-            $table->string('unique_link')->nullable(); // Ensure 'unique_link' is nullable
+            $table->string('geslacht', 191)->nullable();
+            $table->string('voornaam', 191)->nullable();
+            $table->string('tussenvoegsel', 191)->nullable();
+            $table->string('achternaam', 191)->nullable();
+            $table->string('straatnaam', 191)->nullable();
+            $table->string('geboortedatum', 191)->nullable();
+            $table->string('email', 191)->nullable();
+            $table->string('huisnummer', 191)->nullable();
+            $table->string('toevoeging', 191)->nullable();
+            $table->string('postcode', 191)->nullable();
+            $table->string('woonplaats', 191)->nullable();
+            $table->string('iban', 191)->nullable();
+            $table->string('tenaamstellng', 191)->nullable();
+            $table->string('tel1', 191)->nullable();
+            $table->string('tel2', 191)->nullable();
+            $table->string('leverancier', 191)->nullable();
+            $table->string('saledatum', 191)->nullable();
+            $table->string('aanbod', 191)->nullable();
+            $table->string('unique_link', 191)->nullable();
             $table->timestamps();
         });
     }

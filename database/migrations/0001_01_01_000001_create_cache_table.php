@@ -12,14 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('cache', function (Blueprint $table) {
-            $table->string('key')->primary();
+            $table->string('key', 191)->primary(); // Uzunluğu 191'e düşür
             $table->mediumText('value');
             $table->integer('expiration');
         });
 
         Schema::create('cache_locks', function (Blueprint $table) {
-            $table->string('key')->primary();
-            $table->string('owner');
+            $table->string('key', 191)->primary(); // Uzunluğu 191'e düşür
+            $table->string('owner', 191); // Uzunluğu 191'e düşür
             $table->integer('expiration');
         });
     }
@@ -33,3 +33,4 @@ return new class extends Migration
         Schema::dropIfExists('cache_locks');
     }
 };
+

@@ -20,13 +20,25 @@ class CustomerFactory extends Factory
     public function definition(): array
     {
         return [
-            'ad' => $this->faker->firstName,
-            'soyad' => $this->faker->lastName,
-            'ev_no' => $this->faker->buildingNumber,
-            'posta_kodu' => $this->faker->postcode,
-            'sehir' => $this->faker->city,
-            'mail' => $this->faker->email,
-            'tel_no' => $this->faker->phoneNumber,
+            'geslacht' => $this->faker->randomElement(['Man', 'Vrouw']), // Cinsiyet için
+            'voornaam' => $this->faker->firstName,
+            'tussenvoegsel' => $this->faker->optional()->lastName, // Ara isim için, isteğe bağlı
+            'achternaam' => $this->faker->lastName,
+            'straatnaam' => $this->faker->streetName,
+            'email' => $this->faker->email,
+            'geboortedatum' => $this->faker->birthday,
+            'huisnummer' => $this->faker->buildingNumber,
+            'toevoeging' => $this->faker->optional()->secondaryAddress, // Ev no ek için
+            'postcode' => $this->faker->postcode,
+            'woonplaats' => $this->faker->city,
+            'iban' => $this->faker->iban('NL'), // Hollanda için IBAN
+            'tenaamstellng' => $this->faker->name, // İlk Tenaamstellng için
+            'tel1' => $this->faker->phoneNumber,
+            'tel2' => $this->faker->optional()->phoneNumber, // İkinci telefon numarası, isteğe bağlı
+            'leverancier' => $this->faker->company, // Tedarikçi için
+            'saledatum' => $this->faker->date(), // Satış tarihi için
+            'aanbod' => $this->faker->word, // Teklif için
         ];
     }
 }
+
