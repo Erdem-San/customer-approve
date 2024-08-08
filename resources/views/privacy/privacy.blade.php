@@ -8,60 +8,37 @@
     <div class="py-6">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden sm:rounded-lg">
-                <div class="p-4 text-gray-900">
-                    <h1>Gizlilik Politikası</h1>
-                    <p><strong>Son Güncelleme: [Tarih]</strong></p>
+                <div class="space-y-4">
+                    <h5 class="font-bold text-lg">PRIVACY POLICY DUURZAAM GARANT</h5>
+                    <p>Duurzaam Garant hecht veel belang aan de bescherming van privacy en de veiligheid van persoonsgegevens. Wij zullen persoonsgegevens verwerken in overeenstemming met de bepalingen van de Algemene verordening gegevensbescherming (AVG), alsmede overige toepasselijke wet- en regelgeving. Duurzaam Garant kan deze privacy policy van tijd tot tijd aanpassen. Op deze website kunt u onze privacy policy te allen tijde inzien.</p>
+                    <h5>Persoonsgegevens</h5>
+                    <p>In het kader van de verwerking van persoonsgegevens maken wij graag aan u inzichtelijk welke persoonsgegevens wij verzamelen en verwerken. Het betreft de navolgende gegevens:</p><p>
 
-                    <h2>1. Giriş</h2>
-                    <p>Bu Gizlilik Politikası, [Şirket Adı] (“Şirket”, “biz”, “bize” veya “bizim”) tarafından, [Web Sitesi Adresi] web sitesini (“Web Sitesi”) ve ilgili hizmetleri (“Hizmetler”) kullanırken topladığımız, kullandığımız ve koruduğumuz kişisel verilerin nasıl işlediğini açıklamaktadır. Bu politikayı okuyarak, kişisel verilerinizin işlenmesine ilişkin olarak onay verdiğinizi kabul etmektesiniz.</p>
-
-                    <h2>2. Topladığımız Veriler</h2>
-                    <p>Aşağıdaki türde kişisel verileri toplayabiliriz:</p>
-                    <ul>
-                        <li><strong>Kimlik Bilgileri:</strong> Ad, soyad, e-posta adresi, telefon numarası.</li>
-                        <li><strong>İletişim Bilgileri:</strong> E-posta, telefon, adres.</li>
-                        <li><strong>Teknik Veriler:</strong> IP adresi, tarayıcı türü, işletim sistemi, ziyaret edilen sayfalar.</li>
-                        <li><strong>Kullanım Verileri:</strong> Web Sitesi üzerindeki aktiviteleriniz, kullanım süreleri, erişim zamanları.</li>
+                    </p><ul>
+                        <li>Postcode</li>
+                        <li>Huisnummer</li>
+                        <li>Woonplaats</li>
+                        <li>Telefoonnumer</li>
+                        <li>E-mailadres</li>
                     </ul>
 
-                    <h2>3. Verilerin Kullanımı</h2>
-                    <p>Topladığımız verileri aşağıdaki amaçlarla kullanabiliriz:</p>
-                    <ul>
-                        <li>Hizmetlerimizi sağlamak ve yönetmek.</li>
-                        <li>Web Sitesi ve Hizmetlerimizi geliştirmek.</li>
-                        <li>Müşteri desteği sunmak ve sorularınıza yanıt vermek.</li>
-                        <li>Web Sitesi ile ilgili güncellemeler ve pazarlama bilgilerini iletmek.</li>
-                        <li>Yasal yükümlülüklerimizi yerine getirmek.</li>
-                    </ul>
+                    <p>Duurzaam Garant verzamelt geen bijzondere persoonsgegevens als gegevens die voortkomen uit medische dossiers, gegevens over overtredingen en/of veroordelingen etc.</p>
 
-                    <h2>4. Çerezler (Cookies) ve Benzeri Teknolojiler</h2>
-                    <p>Web Sitemiz, kullanıcı deneyimini iyileştirmek amacıyla çerezler ve benzeri teknolojiler kullanabilir. Çerezler, tarayıcınıza gönderilen küçük veri dosyalarıdır. Çerezleri yönetmek ve devre dışı bırakmak için tarayıcı ayarlarınızı kullanabilirsiniz.</p>
+                    <h5>Doeleinden persoonsgegevens</h5>
+                    <p>Als u Duurzaam Garant een e-mail zendt, zullen wij uw persoonsgegevens gebruiken om op uw vragen of opmerkingen te reageren. Als u een offerte opvraagt, gebruiken wij uw persoonsgegevens om u te registreren in onze systemen en een passende offerte op te kunnen maken. Als u akkoord gaat met de offerte, delen we de noodzakelijke gegevens met andere leveranciers en dienstverleners. Die leveranciers en dienstverleners slaan uw gegevens weer op om de overeengekomen diensten en producten aan u te kunnen leveren.
+                    Ook in het kader van onze commerciële relatie zouden wij u e-mailberichten kunnen sturen en/of telefonisch contact met u onderhouden. Duurzaam Garant kan persoonsgegevens ook verwerken om aan wettelijke verplichtingen te voldoen, of - indien van toepassing - in het kader van de (uitvoering van onze) dienstverlening na de overeengekomen contractstermijnen. Tenslotte biedt deze website ook de mogelijkheid om online een contactformulier in te vullen in het kader waarvan ook persoonsgegevens worden verwerkt.
+                    Persoonsgegevens kunnen door ons en/of onze groepsvennootschappen worden verwerkt voor dezelfde doeleinden als hiervoor vermeld.</p>
 
-                    <h2>5. Verilerin Paylaşımı</h2>
-                    <p>Kişisel verilerinizi aşağıdaki durumlarda paylaşabiliriz:</p>
-                    <ul>
-                        <li><strong>Üçüncü Taraf Hizmet Sağlayıcıları:</strong> Web Sitemizi ve Hizmetlerimizi sağlamak için üçüncü taraf hizmet sağlayıcıları ile paylaşabiliriz.</li>
-                        <li><strong>Yasal Gereklilikler:</strong> Yasal yükümlülüklerimizi yerine getirmek veya yasal süreçlere uymak amacıyla verilerinizi paylaşabiliriz.</li>
-                        <li><strong>Şirket Değişiklikleri:</strong> Şirket birleşmeleri, satın almalar veya başka bir organizasyon değişikliği durumunda verilerinizi aktarabiliriz.</li>
-                    </ul>
+                    <h5>Bewaartermijn persoonsgegevens</h5>
+                    <p>Duurzaam Garant bewaart persoonsgegevens die zij verwerkt niet langer dan noodzakelijk is voor het doel van de gegevensverwerking. Hoe lang deze termijn is, verschilt per klant en per geleverde product of dienst.</p>
 
-                    <h2>6. Verilerin Güvenliği</h2>
-                    <p>Kişisel verilerinizi korumak için uygun güvenlik önlemlerini alıyoruz. Ancak, internet üzerinden veri iletimi ve elektronik depolama sistemlerinin tamamen güvenli olduğunu garanti edemeyiz.</p>
+                    <h5>De veiligheid van uw gegevens</h5>
+                    <p>Duurzaam Garant heeft passende technische en organisatorische maatregelen getroffen om persoonsgegevens te beschermen tegen verlies of tegen enige vorm van onrechtmatige verwerking.</p>
 
-                    <h2>7. Haklarınız</h2>
-                    <p>Kişisel verilerinize erişim, düzeltme, silme veya işleme sınırlama hakkına sahipsiniz. Bu haklarınızı kullanmak için bizimle iletişime geçebilirsiniz.</p>
-
-                    <h2>8. Değişiklikler</h2>
-                    <p>Bu Gizlilik Politikası zaman zaman güncellenebilir. Politika değişiklikleri Web Sitesi üzerinde duyurulacak ve güncellenmiş tarihler belirtilecektir.</p>
-
-                    <h2>9. İletişim</h2>
-                    <p>Gizlilik Politikamız hakkında sorularınız veya endişeleriniz varsa, bizimle şu iletişim bilgileri üzerinden iletişime geçebilirsiniz:</p>
-                    <ul>
-                        <li><strong>E-posta:</strong> [E-posta Adresi]</li>
-                        <li><strong>Adres:</strong> [Şirket Adresi]</li>
-                        <li><strong>Telefon:</strong> [Telefon Numarası]</li>
-                    </ul>
-                </div>
+                    <h5>Uw rechten</h5>
+                    <p>Er kan te allen tijde bezwaar worden gemaakt tegen het gebruik van persoonsgegevens voor directe marketing doeleinden en/of de (verdere) ontvangst van (bepaalde) marketing informatie door een verzoek tot beëindiging te richten aan Duurzaam Garant ter attentie van de afdeling Compliancy via info@duurzaamgarant.nl. Voorts heeft u het recht Duurzaam Garant te verzoeken u inzage te verlenen in uw - door Duurzaam Garant als verantwoordelijke in de zin van de Algemene verordening gegevensbescherming (AVG), verwerkte
+                    - persoonsgegevens en/of (voor zover van toepassing) deze te verbeteren, aan te vullen, te verwijderen of af te schermen. Een verzoek om inzage en/of correctie dient u te richten aan Duurzaam Garant ter attentie van de afdeling Communicatie, Boompjes 40, 3011 XB Rotterdam, of info@duurzaamgarant.nl</p>
+                    <p>Datum (laatste aanpassing) | 14 juni 2021</p></div></div>
             </div>
         </div>
     </div>

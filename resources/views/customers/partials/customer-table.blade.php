@@ -1,5 +1,6 @@
-@foreach($customers as $customer)
+@foreach($customers as $index => $customer)
     <tr>
+        <td class="py-2 px-4 border-b">{{ ($customers->currentPage() - 1) * $customers->perPage() + $index + 1 }}</td>
         <td class="py-2 px-4 border-b">{{ $customer->geslacht }}</td>
         <td class="py-2 px-4 border-b">{{ $customer->voornaam }}</td>
         <td class="py-2 px-4 border-b">{{ $customer->tussenvoegsel }}</td>

@@ -50,9 +50,10 @@
                         </button>
                     </form>
 
-                    <div class="mt-8 flex justify-center space-x-4">
-                        <a href="/services" target="_blank" class="underline hover:no-underline">Services</a>
-                        <a href="/privacy" target="_blank" class="underline hover:no-underline">Privacy</a>
+                    <div class="mt-8 flex flex-col justify-center">
+                        <a href="/consumentenvoorwaarden" target="_blank" class="underline hover:no-underline">Consumenten Voorwaarden</a>
+                        <a href="/privacy-policy" target="_blank" class="underline hover:no-underline">Privacy & Policy</a>
+                        <a href="/klachtenprocedure" target="_blank" class="underline hover:no-underline">Klachten Procedure</a>
                     </div>
                 </div>
             </div>

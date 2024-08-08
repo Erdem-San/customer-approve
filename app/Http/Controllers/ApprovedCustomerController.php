@@ -88,11 +88,25 @@ class ApprovedCustomerController extends Controller
     {
         $query = $request->search_string;
 
-        $customers = ApprovedCustomer::where('voornaam', 'like', "%{$query}%")
-            ->orWhere('achternaam', 'like', "%{$query}%")
-            ->orWhere('straatnaam', 'like', "%{$query}%")
-            ->orWhere('postcode', 'like', "%{$query}%")
-            ->paginate(10);
+        $customers = ApprovedCustomer::where('geslacht', 'like', "%{$query}%")
+                    ->orWhere('voornaam', 'like', "%{$query}%")
+                    ->orWhere('tussenvoegsel', 'like', "%{$query}%")
+                    ->orWhere('achternaam', 'like', "%{$query}%")
+                    ->orWhere('straatnaam', 'like', "%{$query}%")
+                    ->orWhere('huisnummer', 'like', "%{$query}%")
+                    ->orWhere('toevoeging', 'like', "%{$query}%")
+                    ->orWhere('postcode', 'like', "%{$query}%")
+                    ->orWhere('woonplaats', 'like', "%{$query}%")
+                    ->orWhere('geboortedatum', 'like', "%{$query}%")
+                    ->orWhere('iban', 'like', "%{$query}%")
+                    ->orWhere('tenaamstellng', 'like', "%{$query}%")
+                    ->orWhere('email', 'like', "%{$query}%")
+                    ->orWhere('tel1', 'like', "%{$query}%")
+                    ->orWhere('tel2', 'like', "%{$query}%")
+                    ->orWhere('leverancier', 'like', "%{$query}%")
+                    ->orWhere('saledatum', 'like', "%{$query}%")
+                    ->orWhere('aanbod', 'like', "%{$query}%")
+                    ->paginate(10);
 
         if ($customers->count() >= 1) {
             return view('approved-customers.partials.customer-table', compact('customers'))->render();

@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Approved Customers') }}
+            {{ __('Goedgekeurde klanten') }}
         </h2>
     </x-slot>
 
@@ -9,16 +9,17 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                    <h2 class="text-2xl font-bold mb-4">Onaylanmış Müşteri Listesi</h2>
+                    <h2 class="text-2xl font-bold mb-4">Goedgekeurde klantenlijst</h2>
 
                     <div class="mb-4">
-                        <input type="text" name="search" id="search" class="w-full border border-gray-300 p-2 rounded" placeholder="Müşteri ara..." />
+                        <input type="text" name="search" id="search" class="w-full border border-gray-300 p-2 rounded" placeholder="Zoek naar klanten..." />
                     </div>
 
                     <div class="overflow-x-auto">
                         <table id="customersTable" class="min-w-full bg-white">
                             <thead class="bg-gray-100">
                                 <tr>
+                                    <th class="py-2 px-4 border-b"></th>
                                     <th class="py-2 px-4 border-b">Ip Address</th>
                                     <th class="py-2 px-4 border-b">User Agent</th>
                                     <th class="py-2 px-4 border-b">Geslacht</th>
@@ -40,8 +41,9 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($customers as $customer)
+                                @foreach($customers as $index => $customer)
                                     <tr>
+                                        <td class="py-2 px-4 border-b">{{ ($customers->currentPage() - 1) * $customers->perPage() + $index + 1 }}</td>
                                         <td class="py-2 px-4 border-b">{{ $customer->ip_address }}</td>
                                         <td class="py-2 px-4 border-b">{{ $customer->user_agent }}</td>
                                         <td class="py-2 px-4 border-b">{{ $customer->geslacht }}</td>
@@ -90,7 +92,7 @@
                         if (res.status !== 'nothing_found') {
                             $('#customersTable tbody').html(res);
                         } else {
-                            $('#customersTable tbody').html('<tr><td colspan="17" class="text-center py-2">Sonuç bulunamadı.</td></tr>');
+                            $('#customersTable tbody').html('<tr><td colspan="17" class="text-center py-2">Geen resultaten gevonden.</td></tr>');
                         }
                     }
                 })

@@ -13,10 +13,10 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('customers.index')" :active="request()->routeIs('customers.index')">
-                        {{ __('Müşteri Listesi') }}
+                        {{ __('Klantenlijst') }}
                     </x-nav-link>
                     <x-nav-link :href="route('approved')" :active="request()->routeIs('approved')">
-                        {{ __('Onaylanmış Müşteriler') }}
+                        {{ __('Goedgekeurde klanten') }}
                     </x-nav-link>
                 </div>
             </div>
@@ -84,7 +84,7 @@
 
             <div class="mt-3 space-y-1">
                 <x-responsive-nav-link :href="route('profile.edit')">
-                    {{ __('Profile') }}
+                    {{ __('Profiel') }}
                 </x-responsive-nav-link>
 
                 <!-- Authentication -->

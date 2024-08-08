@@ -9,11 +9,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/privacy', function () {
+Route::get('/consumentenvoorwaarden', function () {
+    return view('privacy.consumentenvoorwaarden');
+});
+Route::get('/privacy-policy', function () {
     return view('privacy.privacy');
 });
-Route::get('/services', function () {
-    return view('privacy.services');
+Route::get('/klachtenprocedure', function () {
+    return view('privacy.klachtenprocedure');
 });
 
 // Route::get('/customers', function () {
