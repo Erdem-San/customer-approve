@@ -12,8 +12,8 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     </head>
-    <body class="font-sans antialiased bg-gray-50 dark:bg-gray-50 dark:text-white/50">
-        <div class="!bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
+    <body class="font-sans antialiased bg-gray-50 bg-gray-50 text-white/50">
+        <div class="!bg-gray-50 text-black/50 bg-black text-white/50">
 
             <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[green] selection:text-white">
                 <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
@@ -28,14 +28,14 @@
                                 @auth
                                     <a
                                         href="{{ url('/customers') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[green] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[green] text-white hover:text-white/80 focus-visible:ring-white"
                                     >
                                         Dashboard
                                     </a>
                                 @else
                                     <a
                                         href="{{ route('login') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[green] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[green] text-white hover:text-white/80 focus-visible:ring-white"
                                     >
                                         Log in
                                     </a>
@@ -43,7 +43,7 @@
                                     @if (Route::has('register'))
                                         <a
                                             href="{{ route('register') }}"
-                                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[green] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+                                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[green] text-white hover:text-white/80 focus-visible:ring-white"
                                         >
                                             Register
                                         </a>
@@ -57,7 +57,7 @@
                         <a
                                 href="/customers"
                                 id="docs-card"
-                                class="flex flex-col items-start gap-6 overflow-hidden rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[green] md:row-span-3 lg:p-10 lg:pb-10 dark:bg-green-700 dark:ring-green-200 dark:hover:text-white/70 dark:hover:ring-zinc-500 dark:focus-visible:ring-green-500"
+                                class="flex flex-col items-start gap-6 overflow-hidden rounded-l p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none md:row-span-3 lg:p-10 lg:pb-10 bg-green-700 ring-green-200 hover:ring-zinc-500 focus-visible:ring-green-500"
                             >
                                 <div class="relative flex justify-between items-center gap-6 lg:items-end">
                                     <div id="docs-card-content" class="flex items-start gap-6 lg:flex-col">
@@ -69,9 +69,9 @@
                                         </div>
 
                                         <div class="pt-3 sm:pt-5 lg:pt-0 w-full">
-                                            <h2 class="text-xl font-semibold text-black dark:text-white">Welkom Duurzaam Garant</h2>
+                                            <h2 class="text-xl font-semibold text-white">Welkom Duurzaam Garant</h2>
 
-                                            <p class="mt-4 text-sm leading-relaxed">
+                                            <p class="mt-4 text-sm leading-relaxed text-white">
                                                 Ga naar het dashboard
                                             </p>
                                         </div>
@@ -83,7 +83,7 @@
                             </a>
                     </main>
 
-                    <footer class="py-16 text-center text-sm text-black dark:text-white/70">
+                    <footer class="py-16 text-center text-sm text-black text-white/70">
                         Duurzaam Garant
                     </footer>
                 </div>
