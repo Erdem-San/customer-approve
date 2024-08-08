@@ -57,7 +57,7 @@
                         <a
                                 href="/customers"
                                 id="docs-card"
-                                class="flex flex-col items-start gap-6 overflow-hidden rounded-l p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none md:row-span-3 lg:p-10 lg:pb-10 !bg-green-700 ring-green-200 hover:ring-zinc-500 focus-visible:ring-green-500"
+                                class="flex flex-col items-start gap-6 overflow-hidden !bg-green-700 p-8 rounded-xl"
                             >
                                 <div class="relative flex justify-between items-center gap-6 lg:items-end">
                                     <div id="docs-card-content" class="flex items-start gap-6 lg:flex-col">
