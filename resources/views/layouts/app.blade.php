@@ -13,6 +13,7 @@
         <style>
             [aria-label='Pagination Navigation'] span a {
                 background-color: white !important;
+                color:rgb(17 24 39 / var(--tw-text-opacity));
             }
             [aria-label='Pagination Navigation'] span a:hover {
                 background-color: rgb(59 130 246 / var(--tw-bg-opacity)) !important;
