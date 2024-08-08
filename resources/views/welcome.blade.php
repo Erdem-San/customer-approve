@@ -57,6 +57,7 @@
                         <a
                                 href="/customers"
                                 id="docs-card"
+                                style="background-color: #047857; padding: 2rem; border-radius: 0.75rem; display: flex; flex-direction: column; align-items: start; gap: 1.5rem; overflow: hidden;"
                                 class="flex flex-col items-start gap-6 overflow-hidden !bg-green-700 p-8 rounded-xl"
                             >
                                 <div class="relative flex justify-between items-center gap-6 lg:items-end">
