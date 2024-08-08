@@ -106,6 +106,7 @@ class ApprovedCustomerController extends Controller
                     ->orWhere('leverancier', 'like', "%{$query}%")
                     ->orWhere('saledatum', 'like', "%{$query}%")
                     ->orWhere('aanbod', 'like', "%{$query}%")
+                    ->latest()
                     ->paginate(10);
 
         if ($customers->count() >= 1) {

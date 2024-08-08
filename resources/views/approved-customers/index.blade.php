@@ -38,6 +38,7 @@
                                     <th class="py-2 px-4 border-b">Leverancier</th>
                                     <th class="py-2 px-4 border-b">Saledatum</th>
                                     <th class="py-2 px-4 border-b">Aanbod</th>
+                                    <th class="py-2 px-4 border-b">Gemaakt bij</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -62,6 +63,7 @@
                                         <td class="py-2 px-4 border-b">{{ $customer->leverancier }}</td>
                                         <td class="py-2 px-4 border-b">{{ $customer->saledatum }}</td>
                                         <td class="py-2 px-4 border-b">{{ $customer->aanbod }}</td>
+                                        <td class="py-2 px-4 border-b">{{ $customer->created_at }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>
