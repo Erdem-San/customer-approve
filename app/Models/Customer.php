@@ -29,7 +29,6 @@ class Customer extends Model
     protected $fillable = [
         'geslacht', 'voornaam', 'tussenvoegsel', 'achternaam', 'straatnaam',
         'huisnummer', 'toevoeging', 'postcode', 'woonplaats', 'geboortedatum',
-        'iban', 'tenaamstellng', 'email', 'tel1', 'tel2', 'leverancier',
-        'saledatum', 'aanbod', 'unique_link'
+        'email', 'telefoonnummer', 'unique_link'
     ];
 }

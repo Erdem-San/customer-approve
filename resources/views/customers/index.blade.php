@@ -56,7 +56,6 @@
                             <thead class="bg-gray-100">
                                 <tr>
                                     <th class="py-2 px-4 border-b"></th>
-                                    <th class="py-2 px-4 border-b">Geslacht</th>
                                     <th class="py-2 px-4 border-b">Voornaam</th>
                                     <th class="py-2 px-4 border-b">Tussenvoegsel</th>
                                     <th class="py-2 px-4 border-b">Achternaam</th>
@@ -65,13 +64,8 @@
                                     <th class="py-2 px-4 border-b">Toevoeging</th>
                                     <th class="py-2 px-4 border-b">Postcode</th>
                                     <th class="py-2 px-4 border-b">Woonplaats</th>
-                                    <th class="py-2 px-4 border-b">Iban</th>
-                                    <th class="py-2 px-4 border-b">Tenaamstelling</th>
-                                    <th class="py-2 px-4 border-b">Tel 1</th>
-                                    <th class="py-2 px-4 border-b">Tel 2</th>
-                                    <th class="py-2 px-4 border-b">Leverancier</th>
-                                    <th class="py-2 px-4 border-b">Saledatum</th>
-                                    <th class="py-2 px-4 border-b">Aanbod</th>
+                                    <th class="py-2 px-4 border-b">Email</th>
+                                    <th class="py-2 px-4 border-b">Telefoonnummer</th>
                                     <th class="py-2 px-4 border-b">Link</th>
                                 </tr>
                             </thead>
@@ -79,7 +73,6 @@
                                 @foreach($customers as $index => $customer)
                                     <tr>
                                         <td class="py-2 px-4 border-b">{{ ($customers->currentPage() - 1) * $customers->perPage() + $index + 1 }}</td>
-                                        <td class="py-2 px-4 border-b">{{ $customer->geslacht }}</td>
                                         <td class="py-2 px-4 border-b">{{ $customer->voornaam }}</td>
                                         <td class="py-2 px-4 border-b">{{ $customer->tussenvoegsel }}</td>
                                         <td class="py-2 px-4 border-b">{{ $customer->achternaam }}</td>
@@ -88,13 +81,8 @@
                                         <td class="py-2 px-4 border-b">{{ $customer->toevoeging }}</td>
                                         <td class="py-2 px-4 border-b">{{ $customer->postcode }}</td>
                                         <td class="py-2 px-4 border-b">{{ $customer->woonplaats }}</td>
-                                        <td class="py-2 px-4 border-b">{{ $customer->iban }}</td>
-                                        <td class="py-2 px-4 border-b">{{ $customer->tenaamstellng }}</td>
-                                        <td class="py-2 px-4 border-b">{{ $customer->tel1 }}</td>
-                                        <td class="py-2 px-4 border-b">{{ $customer->tel2 }}</td>
-                                        <td class="py-2 px-4 border-b">{{ $customer->leverancier }}</td>
-                                        <td class="py-2 px-4 border-b">{{ $customer->saledatum }}</td>
-                                        <td class="py-2 px-4 border-b">{{ $customer->aanbod }}</td>
+                                        <td class="py-2 px-4 border-b">{{ $customer->email }}</td>
+                                        <td class="py-2 px-4 border-b">{{ $customer->telefoonnummer }}</td>
                                         <td class="py-2 px-4 border-b">{{ $customer->unique_link }}</td>
                                     </tr>
                                 @endforeach

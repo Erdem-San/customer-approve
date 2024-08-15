@@ -19,7 +19,6 @@ class ApprovedCustomerController extends Controller
     {
         // Yeni onaylı müşteri oluştur
         $approvedCustomer = new ApprovedCustomer();
-        $approvedCustomer->geslacht = $request->geslacht;
         $approvedCustomer->voornaam = $request->voornaam;
         $approvedCustomer->tussenvoegsel = $request->tussenvoegsel;
         $approvedCustomer->achternaam = $request->achternaam;
@@ -29,14 +28,8 @@ class ApprovedCustomerController extends Controller
         $approvedCustomer->postcode = $request->postcode;
         $approvedCustomer->woonplaats = $request->woonplaats;
         $approvedCustomer->geboortedatum = $request->geboortedatum;
-        $approvedCustomer->iban = $request->iban;
-        $approvedCustomer->tenaamstellng = $request->tenaamstellng;
         $approvedCustomer->email = $request->email;
-        $approvedCustomer->tel1 = $request->tel1;
-        $approvedCustomer->tel2 = $request->tel2;
-        $approvedCustomer->leverancier = $request->leverancier;
-        $approvedCustomer->saledatum = $request->saledatum;
-        $approvedCustomer->aanbod = $request->aanbod;
+        $approvedCustomer->telefoonnummer = $request->telefoonnummer;
 
         $approvedCustomer->ip_address = $request->ip();
         $approvedCustomer->user_agent = $request->userAgent();
@@ -88,8 +81,7 @@ class ApprovedCustomerController extends Controller
     {
         $query = $request->search_string;
 
-        $customers = ApprovedCustomer::where('geslacht', 'like', "%{$query}%")
-                    ->orWhere('voornaam', 'like', "%{$query}%")
+        $customers = ApprovedCustomer::where('voornaam', 'like', "%{$query}%")
                     ->orWhere('tussenvoegsel', 'like', "%{$query}%")
                     ->orWhere('achternaam', 'like', "%{$query}%")
                     ->orWhere('straatnaam', 'like', "%{$query}%")
@@ -98,14 +90,8 @@ class ApprovedCustomerController extends Controller
                     ->orWhere('postcode', 'like', "%{$query}%")
                     ->orWhere('woonplaats', 'like', "%{$query}%")
                     ->orWhere('geboortedatum', 'like', "%{$query}%")
-                    ->orWhere('iban', 'like', "%{$query}%")
-                    ->orWhere('tenaamstellng', 'like', "%{$query}%")
                     ->orWhere('email', 'like', "%{$query}%")
-                    ->orWhere('tel1', 'like', "%{$query}%")
-                    ->orWhere('tel2', 'like', "%{$query}%")
-                    ->orWhere('leverancier', 'like', "%{$query}%")
-                    ->orWhere('saledatum', 'like', "%{$query}%")
-                    ->orWhere('aanbod', 'like', "%{$query}%")
+                    ->orWhere('telefoonnummer', 'like', "%{$query}%")
                     ->latest()
                     ->paginate(10);
 

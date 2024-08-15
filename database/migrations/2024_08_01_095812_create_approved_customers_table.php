@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('approved_customers', function (Blueprint $table) {
             $table->id();
-            $table->string('geslacht', 191)->nullable();
             $table->string('voornaam', 191)->nullable();
             $table->string('tussenvoegsel', 191)->nullable();
             $table->string('achternaam', 191)->nullable();
@@ -24,13 +23,7 @@ return new class extends Migration
             $table->string('toevoeging', 191)->nullable();
             $table->string('postcode', 191)->nullable();
             $table->string('woonplaats', 191)->nullable();
-            $table->string('iban', 191)->nullable();
-            $table->string('tenaamstellng', 191)->nullable();
-            $table->string('tel1', 191)->nullable();
-            $table->string('tel2', 191)->nullable();
-            $table->string('leverancier', 191)->nullable();
-            $table->string('saledatum', 191)->nullable();
-            $table->string('aanbod', 191)->nullable();
+            $table->string('telefoonnummer', 191)->nullable();
             $table->string('ip_address', 45)->nullable();
             $table->string('user_agent', 255)->nullable();
             $table->text('session_data')->nullable(); // JSON yerine TEXT

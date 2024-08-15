@@ -13,7 +13,6 @@ use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 class CustomerController extends Controller
 {
     private $columnMapping = [
-        'Geslacht' => 'geslacht',
         'Voornaam' => 'voornaam',
         'Tussenvoegsel' => 'tussenvoegsel',
         'Achternaam' => 'achternaam',
@@ -22,15 +21,10 @@ class CustomerController extends Controller
         'Toevoeging' => 'toevoeging',
         'Postcode' => 'postcode',
         'Woonplaats' => 'woonplaats',
-        'Geboortedatum' => 'geboortedatum', // Yeni eklenen alan
-        'Iban' => 'iban',
-        'Tenaamstell\'ng' => 'tenaamstellng', // Düzeltildi
-        'Email' => 'email', // Yeni eklenen alan
-        'Tel1' => 'tel1',
-        'Tel2' => 'tel2',
-        'Leverancier' => 'leverancier',
-        'Saledatum' => 'saledatum',
-        'Aanbod' => 'aanbod',
+        'Geboortedatum' => 'geboortedatum',
+        'E-mail' => 'email',
+        'Telefoonnummer' => 'telefoonnummer',
+        'Email' => 'email',
     ];
 
     public function index()
@@ -114,10 +108,9 @@ class CustomerController extends Controller
 
         // Başlıkları ekleyelim
         $header = [
-            'Geslacht', 'Voornaam', 'Tussenvoegsel', 'Achternaam',
+            'Voornaam', 'Tussenvoegsel', 'Achternaam',
             'Straatnaam', 'Huisnummer', 'Toevoeging', 'Postcode', 'Woonplaats',
-            'Geboortedatum', 'Iban', 'Tenaamstelling', 'Email', 'Tel1', 'Tel2',
-            'Leverancier', 'Saledatum', 'Aanbod', 'Link'
+            'Geboortedatum', 'E-mail', 'Telefoonnummer', 'Link'
         ];
 
         $sheet->fromArray($header, null, 'A1');
@@ -126,7 +119,6 @@ class CustomerController extends Controller
         $rowNumber = 2; // Başlık satırından sonra başlıyoruz
         foreach ($customers as $customer) {
             $sheet->fromArray([
-                $customer->geslacht,
                 $customer->voornaam,
                 $customer->tussenvoegsel,
                 $customer->achternaam,
@@ -135,15 +127,9 @@ class CustomerController extends Controller
                 $customer->toevoeging,
                 $customer->postcode,
                 $customer->woonplaats,
-                $customer->geboortedatum, // Yeni alan
-                $customer->iban,
-                $customer->tenaamstellng, // Düzeltilmiş alan
-                $customer->email, // Yeni alan
-                $customer->tel1,
-                $customer->tel2,
-                $customer->leverancier,
-                $customer->saledatum,
-                $customer->aanbod,
+                $customer->geboortedatum,
+                $customer->email,
+                $customer->telefoonnummer,
                 $customer->unique_link,
             ], null, 'A' . $rowNumber);
             $rowNumber++;
@@ -168,8 +154,7 @@ class CustomerController extends Controller
     {
         $query = $request->search_string;
 
-        $customers = Customer::where('geslacht', 'like', "%{$query}%")
-                ->orWhere('voornaam', 'like', "%{$query}%")
+        $customers = Customer::where('voornaam', 'like', "%{$query}%")
                 ->orWhere('tussenvoegsel', 'like', "%{$query}%")
                 ->orWhere('achternaam', 'like', "%{$query}%")
                 ->orWhere('straatnaam', 'like', "%{$query}%")
@@ -178,14 +163,8 @@ class CustomerController extends Controller
                 ->orWhere('postcode', 'like', "%{$query}%")
                 ->orWhere('woonplaats', 'like', "%{$query}%")
                 ->orWhere('geboortedatum', 'like', "%{$query}%")
-                ->orWhere('iban', 'like', "%{$query}%")
-                ->orWhere('tenaamstellng', 'like', "%{$query}%")
                 ->orWhere('email', 'like', "%{$query}%")
-                ->orWhere('tel1', 'like', "%{$query}%")
-                ->orWhere('tel2', 'like', "%{$query}%")
-                ->orWhere('leverancier', 'like', "%{$query}%")
-                ->orWhere('saledatum', 'like', "%{$query}%")
-                ->orWhere('aanbod', 'like', "%{$query}%")
+                ->orWhere('telefoonnummer', 'like', "%{$query}%")
                 ->latest()
                 ->paginate(10);
 

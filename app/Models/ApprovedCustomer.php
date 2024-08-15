@@ -9,8 +9,8 @@ class ApprovedCustomer extends Model
 {
     use HasFactory;
 
-    protected $fillable = [ 'id',
-    'Geslacht',
+    protected $fillable = [
+    'id',
     'Voornaam',
     'Tussenvoegsel',
     'Achternaam',
@@ -19,13 +19,7 @@ class ApprovedCustomer extends Model
     'Toevoeging',
     'Postcode',
     'Woonplaats',
-    'Iban',
-    'Tenaamstellng',
-    'Tel1',
-    'Tel2',
-    'Leverancier',
-    'Saledatum',
-    'Aanbod',
+    'telefoonnummer',
     'unique_link', '
     ip_address',
     'user_agent',
