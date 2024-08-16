@@ -11,17 +11,18 @@ class ApprovedCustomer extends Model
 
     protected $fillable = [
     'id',
-    'Voornaam',
-    'Tussenvoegsel',
-    'Achternaam',
-    'Straatnaam',
-    'Huisnummer',
-    'Toevoeging',
-    'Postcode',
-    'Woonplaats',
+    'voornaam',
+    'tussenvoegsel',
+    'achternaam',
+    'straatnaam',
+    'huisnummer',
+    'toevoeging',
+    'postcode',
+    'woonplaats',
+    'email',
     'telefoonnummer',
-    'unique_link', '
-    ip_address',
+    'unique_link',
+    'ip_address',
     'user_agent',
     'session_data'];
 }
