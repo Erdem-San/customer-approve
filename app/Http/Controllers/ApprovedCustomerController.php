@@ -27,7 +27,6 @@ class ApprovedCustomerController extends Controller
         $approvedCustomer->toevoeging = $request->toevoeging;
         $approvedCustomer->postcode = $request->postcode;
         $approvedCustomer->woonplaats = $request->woonplaats;
-        $approvedCustomer->geboortedatum = $request->geboortedatum;
         $approvedCustomer->email = $request->email;
         $approvedCustomer->telefoonnummer = $request->telefoonnummer;
 
@@ -89,7 +88,6 @@ class ApprovedCustomerController extends Controller
                     ->orWhere('toevoeging', 'like', "%{$query}%")
                     ->orWhere('postcode', 'like', "%{$query}%")
                     ->orWhere('woonplaats', 'like', "%{$query}%")
-                    ->orWhere('geboortedatum', 'like', "%{$query}%")
                     ->orWhere('email', 'like', "%{$query}%")
                     ->orWhere('telefoonnummer', 'like', "%{$query}%")
                     ->latest()

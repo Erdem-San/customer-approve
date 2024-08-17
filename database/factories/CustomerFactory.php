@@ -25,7 +25,6 @@ class CustomerFactory extends Factory
             'achternaam' => $this->faker->lastName,
             'straatnaam' => $this->faker->streetName,
             'email' => $this->faker->email,
-            'geboortedatum' => $this->faker->birthday,
             'huisnummer' => $this->faker->buildingNumber,
             'toevoeging' => $this->faker->optional()->secondaryAddress, // Ev no ek için
             'postcode' => $this->faker->postcode,

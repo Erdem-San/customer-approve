@@ -18,7 +18,6 @@
                     <p class="text-lg"><strong>Toevoeging:</strong> {{ $customer->toevoeging }}</p>
                     <p class="text-lg"><strong>Postcode:</strong> {{ $customer->postcode }}</p>
                     <p class="text-lg"><strong>Woonplaats:</strong> {{ $customer->woonplaats }}</p>
-                    <p class="text-lg"><strong>Geboortedatum:</strong> {{ $customer->geboortedatum }}</p>
                     <p class="text-lg"><strong>Email:</strong> {{ $customer->email }}</p>
                     <p class="text-lg"><strong>Telefoonnummer:</strong> {{ $customer->telefoonnummer }}</p>
 
@@ -35,7 +34,6 @@
                         <input type="hidden" name="email" value="{{ $customer->email }}">
                         <input type="hidden" name="postcode" value="{{ $customer->postcode }}">
                         <input type="hidden" name="woonplaats" value="{{ $customer->woonplaats }}">
-                        <input type="hidden" name="geboortedatum" value="{{ $customer->geboortedatum }}">
                         <input type="hidden" name="telefoonnummer" value="{{ $customer->telefoonnummer }}">
                         <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 mt-4 px-4 w-full rounded">
                             Ik keur goed

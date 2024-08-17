@@ -28,7 +28,7 @@ class Customer extends Model
 
     protected $fillable = [
         'geslacht', 'voornaam', 'tussenvoegsel', 'achternaam', 'straatnaam',
-        'huisnummer', 'toevoeging', 'postcode', 'woonplaats', 'geboortedatum',
+        'huisnummer', 'toevoeging', 'postcode', 'woonplaats',
         'email', 'telefoonnummer', 'unique_link'
     ];
 }

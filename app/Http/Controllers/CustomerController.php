@@ -21,7 +21,6 @@ class CustomerController extends Controller
         'Toevoeging' => 'toevoeging',
         'Postcode' => 'postcode',
         'Woonplaats' => 'woonplaats',
-        'Geboortedatum' => 'geboortedatum',
         'E-mail' => 'email',
         'Telefoonnummer' => 'telefoonnummer',
         'Email' => 'email',
@@ -110,7 +109,7 @@ class CustomerController extends Controller
         $header = [
             'Voornaam', 'Tussenvoegsel', 'Achternaam',
             'Straatnaam', 'Huisnummer', 'Toevoeging', 'Postcode', 'Woonplaats',
-            'Geboortedatum', 'E-mail', 'Telefoonnummer', 'Link'
+            'E-mail', 'Telefoonnummer', 'Link'
         ];
 
         $sheet->fromArray($header, null, 'A1');
@@ -127,7 +126,6 @@ class CustomerController extends Controller
                 $customer->toevoeging,
                 $customer->postcode,
                 $customer->woonplaats,
-                $customer->geboortedatum,
                 $customer->email,
                 $customer->telefoonnummer,
                 $customer->unique_link,
